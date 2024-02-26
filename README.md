@@ -18,9 +18,14 @@ cd helm
 kubectl get ns
 
 helm install webapp1 ./webapp1 -n dev --create-namespace -f dev.yaml
+
+
+#
 kubectl get all -n dev
 
 helm install webapp1 ./webapp1 -n prod --create-namespace -f prod.yaml
+
+#
 kubectl get all -n prod
 
 helm list --all-namespaces
